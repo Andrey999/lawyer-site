@@ -1,0 +1,67 @@
+@import "vars.scss";
+@import "fonts.scss";
+@import "mixin";
+//@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+ul, li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+//.wrapper {
+//  width: 1200px;  //85%
+//  margin: 0 auto;
+//  padding: 0 20px;
+//  //margin: 0 7%;
+//  position: relative;
+//}
+
+
+//////////////// HEADER //////////////////
+.header__top {
+  background-color: #303030;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import "./media.scss";
