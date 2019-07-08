@@ -25,7 +25,9 @@ const plumberOptions = {
 //  записываем в переменную какие css файлы будем обрабатывать
 const sassAllFiles = [
     'node_modules/normalize.css/normalize.css',
-    './src/scss/style.scss'
+    // 'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css',
+    // 'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css',
+    './src/scss/style.scss',
 ];
 
 function sassStyles() {
@@ -46,6 +48,8 @@ function sassStyles() {
 
 //  записываем в переменную какие js файлы будем обрабатывать
 const jsFiles = [
+    'node_modules/jquery/dist/jquery.js',
+    // 'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
     './src/js/main.js'
 ];
 

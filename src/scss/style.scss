@@ -1,14 +1,32 @@
 @import "vars.scss";
 @import "fonts.scss";
 @import "mixin";
-//@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700|Roboto:400,500&display=swap&subset=cyrillic');
+
+@supports (padding: max(0px)) {
+  .fancybox-caption {
+    padding: 75px unquote('max(44px, env(safe-area-inset-right))') unquote('max(25px, env(safe-area-inset-bottom))') unquote('max(44px, env(safe-area-inset-left))');
+  }
+}
+
+@supports (padding: max(0px)) {
+  .fancybox-caption {
+    padding-left: unquote('max(12px, env(safe-area-inset-left))');
+    padding-right: unquote('max(12px, env(safe-area-inset-right))');
+  }
+}
+
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-size: 16px;
+  font-size: $fsize;
+  line-height: 20px;
+  font-family: $ptserif;
+  font-weight: 400;
+  color: #5e5e5e;
 }
 
 a {
@@ -36,11 +54,107 @@ ul, li {
 //  position: relative;
 //}
 
+%font {
+  font-size: $fsize;
+  color: #cbcacb;
+  font-family: $ptserif;
+  line-height: 45px;
+}
 
 //////////////// HEADER //////////////////
-.header__top {
+//  header__contacts
+.header__contacts {
   background-color: #303030;
 }
+
+.header__phone {
+  position: relative;
+  @extend %font;
+  letter-spacing: 0.25px;
+  padding-left: 20px;
+  padding-right: 30px;
+
+  &:before {
+    content: "\f095";
+    font-family: "icomoon";
+    position: absolute;
+    left: 0;
+    color: #ffc222;
+  }
+}
+
+.header__email {
+  position: relative;
+  @extend %font;
+  padding-left: 24px;
+
+  &:before {
+    content: "\f003";
+    font-family: "icomoon";
+    position: absolute;
+    left: 0;
+    color: #ffc222;
+  }
+}
+
+.header__btn {
+  position: relative;
+  @extend %font;
+  float: right;
+  line-height: 36px;
+  color: #1b1b1b;
+  background-color: $accent;
+  padding: 5px 20px 4px 50px;
+
+  &:before {
+    content: "\f0b1";
+    font-family: "icomoon";
+    position: absolute;
+    left: 22px;
+    color: #1b1b1b;
+  }
+}
+
+// header__content
+.header__content {
+  padding: 34px 0 23px;
+}
+
+.container.header__content-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.menu {
+
+  ul {
+    display: flex;
+  }
+
+  li {
+    & + li {
+      padding-left: 10px;
+    }
+
+
+    a {
+      color: #323232;
+      line-height: 36px;
+      border: 1px solid transparent;
+      padding: 0 17px;
+      transition: all .3s ease;
+
+      &:hover {
+        border-color: $accent;
+      }
+    }
+  }
+
+}
+
+
+
 
 
 
