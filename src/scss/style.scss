@@ -1,20 +1,14 @@
-@import "vars.scss";
-@import "fonts.scss";
+@import "vars";
+@import "fonts";
 @import "mixin";
+@import "fancybox";
 @import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700|Roboto:400,500&display=swap&subset=cyrillic');
 
-@supports (padding: max(0px)) {
-  .fancybox-caption {
-    padding: 75px unquote('max(44px, env(safe-area-inset-right))') unquote('max(25px, env(safe-area-inset-bottom))') unquote('max(44px, env(safe-area-inset-left))');
-  }
-}
+@import "header";
+@import "services";
+@import "about";
+@import "consultation";
 
-@supports (padding: max(0px)) {
-  .fancybox-caption {
-    padding-left: unquote('max(12px, env(safe-area-inset-left))');
-    padding-right: unquote('max(12px, env(safe-area-inset-right))');
-  }
-}
 
 
 * {
@@ -27,6 +21,11 @@ body {
   font-family: $ptserif;
   font-weight: 400;
   color: #5e5e5e;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -54,128 +53,104 @@ ul, li {
 //  position: relative;
 //}
 
-%font {
-  font-size: $fsize;
-  color: #cbcacb;
-  font-family: $ptserif;
-  line-height: 45px;
+
+/////////////////// MODAL FANCYBOX  //////////////////////
+.modal {
+  display: none;
 }
 
-//////////////// HEADER //////////////////
-//  header__contacts
-.header__contacts {
-  background-color: #303030;
+///////////////////////// HEADER - SLIDER  /////////////////////////////
+.slider {
+  background-image: url(../../src/img/slider-fon.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 500px;
 }
 
-.header__phone {
+.slider__inner {
   position: relative;
-  @extend %font;
-  letter-spacing: 0.25px;
-  padding-left: 20px;
-  padding-right: 30px;
-
-  &:before {
-    content: "\f095";
-    font-family: "icomoon";
-    position: absolute;
-    left: 0;
-    color: #ffc222;
-  }
 }
 
-.header__email {
-  position: relative;
-  @extend %font;
-  padding-left: 24px;
-
-  &:before {
-    content: "\f003";
-    font-family: "icomoon";
-    position: absolute;
-    left: 0;
-    color: #ffc222;
-  }
+.slider__item-content {
+  text-align: center;
+  padding-top: 110px;
+  max-width: 665px;
+  margin: 0 auto;
 }
 
-.header__btn {
-  position: relative;
-  @extend %font;
-  float: right;
+.slider__title {
+  text-transform: uppercase;
+  color: #fff;
   line-height: 36px;
-  color: #1b1b1b;
-  background-color: $accent;
-  padding: 5px 20px 4px 50px;
+  font-size: 30px;
+  letter-spacing: 0.5px;
+  margin-bottom: 22px;
+}
 
-  &:before {
-    content: "\f0b1";
+.slider__text {
+  color: #d3d2d2;
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 50px;
+}
+
+.default-button {
+  color: #fff;
+  font-size: 14px;
+  line-height: 24px;
+  padding: 8px 30px 8px 24px;
+  border: 1px solid $accent;
+  border-right-width: 20px;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+
+  &:after {
+    content: "\f105";
     font-family: "icomoon";
     position: absolute;
-    left: 22px;
-    color: #1b1b1b;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -12px;
   }
 }
 
-// header__content
-.header__content {
-  padding: 34px 0 23px;
-}
+.slick-btn {
+  position: absolute;
+  top: 70%;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #fff;
+  background: $accent;
+  z-index: 3;
+  cursor: pointer;
+  outline: none;
 
-.container.header__content-wrapper {
-  display: flex;
-  justify-content: space-between;
-}
-
-
-.menu {
-
-  ul {
-    display: flex;
+  &.slick-disabled {
+    background: transparent;
+    cursor: default;
   }
-
-  li {
-    & + li {
-      padding-left: 10px;
-    }
-
-
-    a {
-      color: #323232;
-      line-height: 36px;
-      border: 1px solid transparent;
-      padding: 0 17px;
-      transition: all .3s ease;
-
-      &:hover {
-        border-color: $accent;
-      }
-    }
-  }
-
 }
 
+.slick-prev {
+  left: 0;
 
+  &:before {
+    content: '\f104';
+    font-family: "icomoon";
+    color: #fff;
+  }
+}
 
+.slick-next {
+  right: 0;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  &:before {
+    content: '\f105';
+    font-family: "icomoon";
+    color: #fff;
+  }
+}  ///////////////////////// HEADER - SLIDER   END /////////////////////////////
 
 @import "./media.scss";

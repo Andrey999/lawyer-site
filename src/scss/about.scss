@@ -1,0 +1,35 @@
+.about {
+  background-image: url(../../src/img/about-fon.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 300px;
+  padding: 30px 0 45px;
+}
+
+.about__content {
+  max-width: 545px;
+}
+
+.about__title {
+  color: #fff;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 500;
+  padding: 10px 0 25px;
+}
+
+.about__text {
+  margin-bottom: 30px;
+  color: #d3d2d2;
+  line-height: 24px;
+  letter-spacing:  0.1px;
+}
+
+.default-button {
+  color: #000;
+
+  &:after {
+    color: #000;
+  }
+}

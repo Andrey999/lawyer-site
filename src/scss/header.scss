@@ -1,0 +1,98 @@
+%font {
+  font-size: $fsize;
+  color: #cbcacb;
+  font-family: $ptserif;
+  line-height: 45px;
+}
+
+//////////////// HEADER //////////////////
+//  header__contacts
+.header__contacts {
+  background-color: #303030;
+}
+
+.header__phone {
+  position: relative;
+  @extend %font;
+  letter-spacing: 0.25px;
+  padding-left: 20px;
+  padding-right: 30px;
+
+  &:before {
+    content: "\f095";
+    font-family: "icomoon";
+    position: absolute;
+    left: 0;
+    color: $accent;
+  }
+}
+
+.header__email {
+  position: relative;
+  @extend %font;
+  padding-left: 24px;
+
+  &:before {
+    content: "\f003";
+    font-family: "icomoon";
+    position: absolute;
+    left: 0;
+    color: $accent;
+  }
+}
+
+.header__btn {
+  position: relative;
+  @extend %font;
+  float: right;
+  line-height: 36px;
+  color: #1b1b1b;
+  background-color: $accent;
+  padding: 5px 20px 4px 50px;
+
+  &:before {
+    content: "\f0b1";
+    font-family: "icomoon";
+    position: absolute;
+    left: 22px;
+    color: #1b1b1b;
+  }
+}
+
+// header__content
+.header__content {
+  padding: 34px 0 23px;
+}
+
+.container.header__content-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.menu {
+
+  ul {
+    display: flex;
+  }
+
+  li {
+    & + li {
+      padding-left: 10px;
+    }
+
+
+    a {
+      color: #323232;
+      line-height: 36px;
+      border: 1px solid transparent;
+      padding: 0 17px;
+      transition: all .3s ease;
+
+      &:hover {
+        border-color: $accent;
+      }
+    }
+  }
+
+}
