@@ -26,6 +26,7 @@ const plumberOptions = {
 const sassAllFiles = [
     'node_modules/normalize.css/normalize.css',
     'node_modules/slick-slider/slick/slick.css',
+    'node_modules/jquery-form-styler/dist/jquery.formstyler.css',
     './src/scss/style.scss',
 ];
 
@@ -50,6 +51,7 @@ const jsFiles = [
     'node_modules/jquery/dist/jquery.js',
     'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
     'node_modules/slick-slider/slick/slick.js',
+    'node_modules/jquery-form-styler/dist/jquery.formstyler.js',
     './src/js/main.js'
 ];
 

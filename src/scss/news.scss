@@ -1,0 +1,161 @@
+.news {
+  padding: 55px 0 110px;
+  background-color: #f9f9f9;
+}
+
+.news__top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.news__title-box {
+  max-width: 520px;
+  padding-left: 140px;
+  position: relative;
+}
+
+.news__title-box:before {
+  content: '';
+  position: absolute;
+  width: 105px;
+  height: 2px;
+  background: $accent;
+  left: 0;
+  top: 11px;
+}
+
+.news__title {
+  font-size: 24px;
+  line-height: 28px;
+  color: #212020;
+  margin-bottom: 10px;
+}
+
+.news__text {
+  font-size: 14px;
+  letter-spacing: 0.1px;
+}
+
+.news__btn {
+  a {
+    border: 3px solid #e6e6e6;
+    padding: 5px 38px;
+    line-height: 24px;
+    letter-spacing: 0.25px;
+    color: #373636;
+  }
+}
+
+//  slider
+.news__inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.news__slider {
+  max-width: 555px;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 5px 15px 1px rgba(128, 127, 127, 0.13);
+  padding: 60px 35px 45px 70px;
+  position: relative;
+
+  &:before {
+    content: '\f10e';
+    font-family: 'icomoon';
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 70px;
+    background-color: $accent;
+    width: 65px;
+    height: 30px;
+    font-size: 16px;
+    color: #fff;
+    line-height: 30px;
+  }
+}
+
+.news__slider-inner {
+  .slick-btn {
+    top: auto;
+    bottom: -110px;
+  }
+
+  .slick-next {
+    right: -35px;
+  }
+
+  .slick-prev {
+    right: 20px;
+    left: auto;
+  }
+
+  .slick-disabled {
+    border-color: #dadada;
+
+    &:before {
+      color: #dadada;
+    }
+  }
+}
+
+.news__slider-title {
+  font-size: 20px;
+  line-height: 24px;
+  color: #242424;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  margin-bottom: 15px;
+}
+
+.news__slider-text {
+  margin-bottom: 30px;
+}
+
+.news__slider-author {
+  color: #212020;
+  letter-spacing: 0.1px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+//  news__blog
+.news__blog {
+  max-width: 260px;
+  width: 100%;
+}
+
+.news__images {
+  position: relative;
+}
+
+.news__date {
+  position: absolute;
+  background-color: $accent;
+  width: 50px;
+  height: 54px;
+  color: #fff;
+  font-weight: 700;
+  padding-top: 30px;
+  text-align: center;
+  top: 0;
+  left: 10px;
+}
+
+.news__blog-title {
+  font-size: 16px;
+  line-height: 20px;
+  color: #242424;
+  letter-spacing: 0.25px;
+  padding: 12px 0;
+}
+
+.news__blog-text {
+  color: #5e5e5e;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+}
+
+
+

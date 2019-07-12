@@ -32,6 +32,7 @@
     "@fancyapps/fancybox": "^3.5.7",
     "del": "^3.0.0",
     "jquery": "^3.4.1",
+    "jquery-form-styler": "^2.0.2",
     "normalize.css": "^8.0.0",
     "slick-slider": "^1.8.2"
   }

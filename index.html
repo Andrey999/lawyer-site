@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Lawyer-Site</title>
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,  user-scalable=no">
+    <meta name="HandheldFriendly" content="true">
     <link rel="stylesheet" href="build/css/all.css">
 </head>
 <body>
@@ -209,34 +209,34 @@
                     <div class="form__box-inner">
 
                         <div class="form__box-left">
-                            <label for="">Email
-                                <input type="text">
+                            <label for="email">Email
+                                <input type="text" id="email" placeholder="Ваш email">
                             </label>
 
-                            <label for="">Контактный телефон
-                                <input type="text">
+                            <label for="phone">Контактный телефон
+                                <input type="text" id="phone" placeholder="Ваш телефон">
                             </label>
 
-                            <label for="">ФИО
-                                <input type="text">
+                            <label for="fio">ФИО
+                                <input type="text" id="fio" placeholder="Введите ваше имя">
                             </label>
 
-                            <label for="">Тема вопроса
-                                <select>
-                                    <option value="">---</option>
-                                    <option value="">---</option>
-                                    <option value="">---</option>
-                                    <option value="">---</option>
+                            <label for="theme">Тема вопроса
+                                <select id="theme">
+                                    <option value="">Банкротство</option>
+                                    <option value="">Налоговый аудит</option>
+                                    <option value="">Сопровождение</option>
+                                    <option value="">Консультация</option>
                                 </select>
                             </label>
                         </div>
 
                         <div class="form__box-right">
-                            <label for="">Сообщение
-                                <textarea></textarea>
+                            <label for="message">Сообщение
+                                <textarea id="message" placeholder="Введите Ваше сообщение"></textarea>
                             </label>
 
-                            <button type="submit" >Получить консультацию</button>
+                            <button type="submit" class="form__button default-button">Получить консультацию</button>
                         </div>
                     </div>
                 </form>
@@ -245,6 +245,151 @@
         </div>
     </div>
 </section>  <!--    SECTION  CONSULTATION  END  -->
+
+<!--    SECTION  ADVANTEGES   -->
+<section class="advanteges">
+    <div class="container">
+        <div class="advanteges__inner">
+            <!--       items - 1          -->
+            <div class="advanteges__item">
+                <h3 class="advanteges__title">
+                    Десятки добровольных ликвидаций ежемесячно
+                </h3>
+                <p class="advanteges__text">
+                    Мы умеем минимизировать все риски в процессе добровольной ликвидации юоидических
+                    лиц.
+                </p>
+            </div>
+            <!--       items - 2          -->
+            <div class="advanteges__item">
+                <h3 class="advanteges__title">
+                    Отличное знание законов в сфере банкротства
+                </h3>
+                <p class="advanteges__text">
+                    Позволяют нам эффективно отстаивать как интересы кредиторов, так и интересы
+                    собственников проблемной организации.
+                </p>
+            </div>
+            <!--       items - 3          -->
+            <div class="advanteges__item">
+                <h3 class="advanteges__title">
+                    Большой опыт сопровождения банкротства
+                </h3>
+                <p class="advanteges__text">
+                    Мы обладаем большим опытом сопровождения процедур банкротства предприятий.
+                </p>
+            </div>
+        </div>
+    </div>
+</section> <!--    SECTION  ADVANTEGES  END  -->
+
+<!--    SECTION  COMPANY  NEWS   -->
+<section class="news">
+    <div class="container">
+        <div class="news__top">
+
+            <div class="news__title-box">
+                <h2 class="news__title">Новости компании</h2>
+                <p class="news__text">Комплексный подход к Вашему вопросу, своевременная правовая помощь,
+                    представление
+                    Ваших интересов во всех судебных инстанциях.</p>
+            </div>
+
+            <div class="news__btn">
+                <a href="#">
+                    Открыть все новости
+                </a>
+            </div>
+        </div>
+
+        <div class="news__inner">
+            <!--    SLIDER  BLOCK     -->
+            <div class="news__slider">
+                <div class="news__slider-inner">
+
+                    <!--      slide  1              -->
+                    <div class="news__slider-item">
+                        <h3 class="news__slider-title">
+                            Банкротство и ликвидация предприятия в Украине
+                        </h3>
+                        <p class="news__slider-text">
+                            На сегодняшний день, коллектив компании обьединяет высокопрофессиональных экспертов
+                            имеющих специализации в разных областях права.На сегодняшний день, коллектив компании обьединяет высокопрофессиональных экспертов
+                            имеющих специализации в разных областях права.На сегодняшний день, коллектив компании обьединяет высокопрофессиональных экспертов
+                            имеющих специализации в разных областях права...
+                        </p>
+                        <p class="news__slider-author">
+                            Андрей Ворошилов, генеральный директор компании Bankom
+                        </p>
+                    </div>
+
+                    <!--      slide  2              -->
+                    <div class="news__slider-item">
+                        <h3 class="news__slider-title">
+                            Банкротство и ликвидация предприятия в Украине
+                        </h3>
+                        <p class="news__slider-text">
+                            На сегодняшний день, коллектив компании обьединяет высокопрофессиональных экспертов
+                            имеющих специализации в разных областях права.На сегодняшний день, коллектив компании обьединяет высокопрофессиональных экспертов
+                            имеющих специализации в разных областях права.На сегодняшний день, коллектив компании обьединяет высокопрофессиональных экспертов
+                            имеющих специализации в разных областях права...
+                        </p>
+                        <p class="news__slider-author">
+                            Андрей Ворошилов, генеральный директор компании Bankom
+                        </p>
+                    </div>
+
+                    <!--      slide  3              -->
+                    <div class="news__slider-item">
+                        <h3 class="news__slider-title">
+                            Банкротство и ликвидация предприятия в Украине
+                        </h3>
+                        <p class="news__slider-text">
+                            На сегодняшний день, коллектив компании обьединяет высокопрофессиональных экспертов
+                            имеющих специализации в разных областях права.На сегодняшний день, коллектив компании обьединяет высокопрофессиональных экспертов
+                            имеющих специализации в разных областях права.На сегодняшний день, коллектив компании обьединяет высокопрофессиональных экспертов
+                            имеющих специализации в разных областях права...
+                        </p>
+                        <p class="news__slider-author">
+                            Андрей Ворошилов, генеральный директор компании Bankom
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!--    NEWS  BLOG    -->
+            <a class="news__blog" href="#">
+                <div class="news__images">
+                    <img src="src/img/news-1.jpg" alt="">
+                    <div class="news__date">03.04</div>
+                </div>
+                <h3 class="news__blog-title">
+                    Новость компании
+                </h3>
+                <p class="news__blog-text">
+                    На сегодняшний день, коллектив компании обьединяет высокопрофессиональных экспертов
+                    имеющих специализации в разных областях права...
+                </p>
+            </a>
+
+            <a class="news__blog" href="#">
+                <div class="news__images">
+                    <img src="src/img/news-2.jpg" alt="">
+                    <div class="news__date">03.04</div>
+                </div>
+                <h3 class="news__blog-title">
+                    Новость компании
+                </h3>
+                <p class="news__blog-text">
+                    На сегодняшний день, коллектив компании обьединяет высокопрофессиональных экспертов
+                    имеющих специализации в разных областях права...
+                </p>
+            </a>
+
+
+        </div>
+    </div>
+</section>  <!--    SECTION  COMPANY  NEWS  END -->
 
 
 

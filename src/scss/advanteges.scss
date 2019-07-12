@@ -1,0 +1,70 @@
+.advanteges {
+  background-image: url(../../src/img/adv-fon.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 285px;
+  padding: 55px 0 40px;
+}
+
+.advanteges__inner {
+  text-align: center;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+
+.advanteges__item {
+  max-width: 360px;
+  padding: 0 20px;
+}
+
+.advanteges__title {
+  color: #fff;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 500;
+  padding: 60px 0 15px;
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    //margin-right: -25px;
+    width: 40px;
+    height: 40px;
+    border: 2px solid $accent;
+    cursor: pointer;
+    transition: all .4s ease;
+  }
+
+  &:hover:before {
+    border: 2px solid #fff;
+  }
+
+  &:after {
+    content: "\f00c";
+    font-family: "icomoon";
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    cursor: pointer;
+    transition: all .4s ease;
+  }
+
+  &:hover:after {
+    color: $accent;
+  }
+}
+
+.advanteges__text {
+  color: #d3d2d2;
+  letter-spacing: 0.1px;
+  line-height: 24px;
+
+}
