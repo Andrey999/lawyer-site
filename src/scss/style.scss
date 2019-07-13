@@ -10,6 +10,7 @@
 @import "consultation";
 @import "advanteges";
 @import "news";
+@import "footer";
 
 
 
@@ -59,6 +60,36 @@ ul, li {
 /////////////////// MODAL FANCYBOX  //////////////////////
 .modal {
   display: none;
+  max-width: 300px;
+
+  input {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    height: 40px;
+    outline: none;
+    padding: 0 10px;
+    border: 1px solid #e6e6e6;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  input[type="submit"] {
+    background-color: $accent;
+    border: none;
+  }
+
+  button {
+    svg {
+      transition: transform .4s ease;
+
+      &:hover {
+        transform: rotate(90deg);
+      }
+    }
+  }
 }
 
 ///////////////////////// HEADER - SLIDER  /////////////////////////////
