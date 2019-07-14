@@ -176,10 +176,9 @@
     }
   }
 
-  .slider {
-
+  .slider__inner {
     .slick-btn {
-      display: none;
+      display: none !important;
     }
   }
 
@@ -363,6 +362,12 @@
   .menu {
     ul {
       display: flex !important;
+    }
+  }
+
+  .slider__inner {
+    .slick-btn {
+      display: block;
     }
   }
 

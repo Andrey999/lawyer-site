@@ -128,12 +128,6 @@ gulp.task('dev', gulp.series('build', 'watch'));
 
 
 
-
-
-
-
-
-
 //  если нужен чистый scss
 // const cssAllFiles = [
 //     'node_modules/normalize.scss/normalize.scss',
