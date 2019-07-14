@@ -1,2 +1,2 @@
-# LAWYER-SITE:
+# Lawyer-Site:
 https://andrey999.github.io/lawyer-site/
