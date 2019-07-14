@@ -62,11 +62,25 @@
 // header__content
 .header__content {
   padding: 34px 0 23px;
+  transition: all .2s ease;
+
+  &.active__header {
+    max-width: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    padding: 6px 0 3px;
+    z-index: 100;
+    background: #fff;
+    box-shadow: 0 0 14px 2px rgba(91,89,89,0.2);
+  }
 }
 
-.container.header__content-wrapper {
-  display: flex;
-  justify-content: space-between;
+.container {
+  &.header__content-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .menu {

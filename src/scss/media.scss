@@ -1,19 +1,54 @@
 /*   less  1800px     */
-@media screen and (max-width: 1800px) {
-
-}
+@media screen and (max-width: 1800px) {}
 
 /*   less  1130px     */
 @media screen and (max-width: 1130px) {
 
+  //  services
   .services__items {
     display: block;
   }
 
   .services__item {
-    width: 70%;
-    max-width: none;
+    max-width: 75%;
     margin: 30px auto;
+    min-height: 330px;
+  }
+
+  
+  // consultation
+  .form__inner {
+    background-image: none;
+  }
+
+  .form__box {
+    max-width: 100%;
+  }
+
+  .form__box-left {
+    max-width: 335px;
+  }
+
+
+  //  news
+  .news {
+    padding-bottom: 60px;
+  }
+
+  .news__inner {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .news__slider {
+    max-width: 100%;
+    margin-bottom: 90px;
+  }
+
+
+  //  footer
+  .footer__map {
+    width: 585px;
   }
 
 }
@@ -22,12 +57,67 @@
 /*   less  992px     */
 @media screen and (max-width: 992px) {
 
+  //services
+  .services__title-box {
+    max-width: 500px;
+  }
+
+  //  consultation
+  .form__box-inner {
+    display: block;
+  }
+
+  .form__box-left {
+    max-width: 100%;
+  }
+
+  .form__box-right {
+    margin-top: 10px;
+    max-width: 100%;
+  }
+
+
+  // adavnteges
+  .advanteges__inner {
+    display: block;
+  }
+
+  .advanteges__item {
+    max-width: 100%;
+    margin-bottom: 40px;
+    padding: 0 165px;
+  }
+
+
+  //  news
+  .news__title-box {
+    max-width: 495px;
+  }
+
+
+  //  footer
+  .footer__inner {
+    flex-direction: column;
+    flex-flow: column-reverse;
+  }
+
+  .footer__map {
+    width: 100%;
+    margin-bottom: 20px;
+
+    iframe {
+      max-width: 100%;
+      height: 310px;
+    }
+  }
+
 }
 
 
 /*   less  768px     */
 @media screen and (max-width: 768px) {
 
+  //  header
   .header__contacts {
     text-align: center;
 
@@ -92,10 +182,132 @@
       display: none;
     }
   }
+
+  //  services
+  .services__top {
+    display: block;
+  }
+
+  .services__title-box {
+    padding-left: 0;
+    text-align: center;
+    margin: 0 auto 30px;
+
+    &:before {
+      display: none;
+    }
+  }
+
+  .services__btn {
+    text-align: center;
+  }
+
+  .services__items {
+    display: block;
+  }
+
+  .services__item {
+    max-width: 100%;
+    margin: 25px auto;
+    min-height: 330px;
+    box-shadow: 0 3px 12px 4px rgba(91,89,89,.14);
+  }
+
+  //  consultation
+  .form__box-right {
+    button {
+      display: block;
+      margin: auto;
+      float: none;
+    }
+  }
+
+
+  //  advanteges
+  .advanteges__item {
+    padding: 0 25px;
+  }
+
+
+  // news
+  .news__top {
+    display: block;
+  }
+
+  .news__title-box {
+    text-align: center;
+    max-width: 100%;
+    padding: 0 10px;
+    margin-bottom: 25px;
+
+    &:before {
+      display: none;
+    }
+  }
+
+  .news__btn {
+    text-align: center;
+  }
+
+
 }
 
 /*   less  600px     */
 @media screen and (max-width: 600px) {
+
+  //  consultation
+  .form__title-box {
+    max-width: 100%;
+    padding-left: 0;
+    text-align: center;
+
+    &:before {
+      display: none;
+    }
+  }
+
+
+  // news
+  .news__blog {
+    max-width: 70%;
+    margin-bottom: 35px;
+  }
+
+  .news__images {
+    img {
+      width: 100%;
+    }
+  }
+
+  .news__slider {
+    padding: 50px 15px 25px 25px;
+
+    &:before {
+      left: 25px;
+    }
+  }
+
+  .news__slider-inner .slick-next {
+    right: -17px;
+  }
+
+  .news__slider-inner .slick-prev {
+    right: 35px;
+  }
+
+
+  //  footer
+  .footer__inner {
+    flex-flow: column;
+  }
+
+  .footer__info {
+    max-width: 100%;
+  }
+
+  .footer__map {
+    margin-bottom: 0;
+  }
 
 }
 
@@ -103,7 +315,7 @@
 /*   less  479px     */
 @media screen and (max-width: 479px) {
 
-
+  // header
   .header__btn {
     display: block;
     float: none;
@@ -112,11 +324,20 @@
       display: block;
     }
   }
+
+
+  // news
+  .news__blog {
+    max-width: 100%;
+    margin-bottom: 45px;
+  }
 }
+
 
 /*   less  420px     */
 @media screen and (max-width: 420px) {
 
+  // header
   .header__email {
     padding-right: 14px;
   }
@@ -129,6 +350,10 @@
     font-size: 16px;
   }
 
+  // advanteges
+  .advanteges__item {
+    padding: 0;
+  }
 }
 
 ///////////////////////    min  -  height     ///////////////////////////////

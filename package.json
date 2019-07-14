@@ -34,6 +34,7 @@
     "jquery": "^3.4.1",
     "jquery-form-styler": "^2.0.2",
     "normalize.css": "^8.0.0",
-    "slick-slider": "^1.8.2"
+    "slick-slider": "^1.8.2",
+    "wowjs": "^1.1.3"
   }
 }

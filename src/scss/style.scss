@@ -24,6 +24,7 @@ body {
   font-family: $ptserif;
   font-weight: 400;
   color: #5e5e5e;
+  overflow-x: hidden;
 }
 
 h1, h2, h3, p {
@@ -185,5 +186,9 @@ ul, li {
     color: #fff;
   }
 }  ///////////////////////// HEADER - SLIDER   END /////////////////////////////
+
+
+////////////  plugin  wow js ////////////////
+.wow { visibility: hidden; }
 
 @import "./media.scss";
