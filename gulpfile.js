@@ -42,7 +42,7 @@ function sassStyles() {
             cascade: false
         }))
         .pipe(cleanCSS({ level: 2 })) // сжатие стилей
-        .pipe(sourcemaps.write())
+        .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('./build/css'))
         .pipe(browserSync.stream());
 }
@@ -71,6 +71,7 @@ function scripts() {
         .pipe(uglify({
             toplevel: true  // сжатие
         }))
+        .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('./build/js'))
         .pipe(browserSync.stream());
 }
