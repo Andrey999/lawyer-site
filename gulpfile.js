@@ -8,11 +8,10 @@ const imagemin = require('gulp-imagemin'); // минификация изобр�
 const concat = require('gulp-concat'); // конкатенация файлов в один
 const autoprefixer = require('gulp-autoprefixer'); // автопрефиксы
 const cleanCSS = require('gulp-clean-css'); // сжатие стилей
-const uglify = require('gulp-uglify');// сжатие  js
+const uglify = require('gulp-uglify');// сжатие  js// конкатенация html файлов в один
 const sourcemaps = require("gulp-sourcemaps"); // показывает в каких файлах находятся стили
 const browserSync = require('browser-sync').create(); // авто перезагрузка
 const del = require('del');
-
 sass.compiler = require('node-sass');
 
 const plumberOptions = {
@@ -21,6 +20,13 @@ const plumberOptions = {
         this.emit('end');
     }
 };
+
+function html() {
+    return  gulp.src(['./index.html']) // обновление  html 
+        .pipe(concat('index.html'))
+        .pipe(gulp.dest('./build/'))
+        .pipe(browserSync.stream());
+}
 
 //  записываем в переменную какие css файлы будем обрабатывать
 const sassAllFiles = [
@@ -103,6 +109,7 @@ function watch() {   // функция watch  следит за всеми фа�
             // tunnel: true
         });
 
+    gulp.watch('./index.html', html);
     gulp.watch('./src/scss/**/*.scss', sassStyles);
     gulp.watch('./src/js/**/*.js', scripts);
     gulp.watch('./src/img/**/*.*', img);
@@ -116,35 +123,13 @@ function clean() {
 }
 
 
+gulp.task('html', html);
 gulp.task('sassStyles', sassStyles);
 gulp.task('scripts', scripts);
 gulp.task('img', img);
 gulp.task('fonts', fonts);
 gulp.task('watch', watch);
 gulp.task('build', gulp.series( clean, //series- последовательность действий
-    gulp.parallel(sassStyles, scripts, img, fonts)));  //parallel- все запускается одновременно
+    gulp.parallel(html, sassStyles, scripts, img, fonts)));  //parallel- все запускается одновременно
 
 gulp.task('dev', gulp.series('build', 'watch'));
-
-
-
-
-//  если нужен чистый scss
-// const cssAllFiles = [
-//     'node_modules/normalize.scss/normalize.scss',
-//     './src/scss/header.scss',
-//     './src/scss/style.scss'
-// ];
-//
-// function styles() {
-//     return gulp.src(cssAllFiles) // ** -  './src/scss/**/*.scss' искать во всех папках, с расширением scss
-//         .pipe(concat('all.scss')) // конкатенация файлов в один
-//         .pipe(plumber(plumberOptions))
-//         .pipe(autoprefixer({
-//             browsers: ['> 0.1%'], // браузеры которые используются больше 0.1%
-//             cascade: false
-//         }))
-//         .pipe(cleanCSS({ level: 2 })) // сжатие стилей
-//         .pipe(gulp.dest('./build/scss'))
-//         .pipe(browserSync.stream());
-// }

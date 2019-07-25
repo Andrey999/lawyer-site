@@ -93,6 +93,27 @@ ul, li {
   }
 }
 
+
+//////////////// MODAL  FEEDBACK  //////////////////////
+.modal__feedback {
+  width: 50%;
+  text-align: center;
+  background-color: rgba(30,30,30, .7);
+  padding: 90px 90px; 
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity .7s;
+
+  p {
+    font-size: 25px;
+    color: #fff;
+    font-weight: 700;     
+  }
+}
+
 ///////////////////////// HEADER - SLIDER  /////////////////////////////
 .slider {
   background-image: url(../../src/img/slider-fon.jpg);
